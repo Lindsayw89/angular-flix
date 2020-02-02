@@ -7,11 +7,11 @@ import {HttpClient} from '@angular/common/http';
 export class MovieApiServiceService {
 
   url="https://api.themoviedb.org/3/";
-//TODO get api key
+apikey="&api_key=f605912d7a59b1cfb1e62bb44af53eb0";
   constructor(private httpClient : HttpClient) { }
 
   async get(path) {
-    return await this.httpClient.get<any>(this.url + path).toPromise();
+    return await this.httpClient.get<any>(this.url + path + this.apikey).toPromise();
   }
 
  
