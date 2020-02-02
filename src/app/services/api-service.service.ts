@@ -9,6 +9,7 @@ export class ApiServiceService {
 
   url="https://ce-authenticated-backend.herokuapp.com/";
   constructor(private httpClient : HttpClient) { }
+  
   async get(path) {
     return await this.httpClient.get<any>(this.url + path).toPromise();
   }
