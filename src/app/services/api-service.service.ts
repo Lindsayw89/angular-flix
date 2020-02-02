@@ -13,7 +13,7 @@ export class ApiServiceService {
     return await this.httpClient.get<any>(this.url + path).toPromise();
   }
 
-  async post(path, data){
+  async post(path:string, data){
     return await this.httpClient.post(this.url + path, data).toPromise();
   }
 
